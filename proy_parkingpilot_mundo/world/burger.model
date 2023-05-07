@@ -43,10 +43,10 @@
       </ode>
     </physics>
 
-    <model name="cafe">
+    <model name="warehouse_1">
       <static>1</static>
       <include>
-        <uri>model://cafe</uri>      </include>
+        <uri>model://warehouse_1</uri>      </include>
     </model>
      
     <include>
