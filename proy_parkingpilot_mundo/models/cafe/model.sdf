@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
-  <model name="cafe">
+  <model name="my_world">
     <static>true</static>
     <link name="link">
       <collision name="main_floor">
