@@ -31,6 +31,9 @@ setup(
         'console_scripts': [
             'initial_pose_pub = proy_parkingpilot_nav.initial_pose_pub:main' #añadir
             #'ex_nav_to_pose = pamies_villagordo_ex_my_nav2_system.ex_nav_to_pose:main' #añadir
+            'action_server = proy_parkingpilot_nav.action_server:main',
+            'nav_to_pose = proy_parkingpilot_nav.nav_to_pose:main',   # incluir
+            'waypoint_follower = proy_parkingpilot_nav.waypoint_follower:main'
         ],
     },
 )
