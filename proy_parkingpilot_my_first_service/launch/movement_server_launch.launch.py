@@ -8,4 +8,9 @@ def generate_launch_description():
             executable='movement_server',
             output='screen'
         ),
+        Node(
+            package='proy_parkingpilot_my_first_service',
+            executable='movement_server2',
+            output='screen'
+        ),   
     ])

@@ -23,7 +23,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'movement_server = proy_parkingpilot_my_first_service.movement_server:main' #incluir
+            'movement_server = proy_parkingpilot_my_first_service.movement_server:main', #incluir
+            'movement_server2 = proy_parkingpilot_my_first_service.movement_server2:main' #incluir
         ],
     },
 )

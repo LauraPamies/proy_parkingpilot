@@ -86,7 +86,7 @@ class Service(Node):
         self.get_logger().info('Following ' + str(len(goal_msg.poses)) + ' goals...')
 
         send_goal_future = self._action_client.send_goal_async(goal_msg, self.feedback_callback)
-        rclpy.spin_until_future_complete(self, send_goal_future)
+        rclpy(self, send_goal_future)
         self.goal_handle = send_goal_future.result()
 
         if not self.goal_handle.accepted:

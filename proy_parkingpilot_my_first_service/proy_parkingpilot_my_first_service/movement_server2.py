@@ -9,7 +9,7 @@ from rclpy.node import Node
 class Service(Node):
     def __init__(self):
         #constructor con el nombre del nodo
-        super().__init__('movement_server') 
+        super().__init__('movement_server2') 
         # declara el objeto servicio pasando como parametros
         # tipo de mensaje
         # nombre del servicio
@@ -113,9 +113,3 @@ def main(args=None):
 #definimos el ejecutable
 if __name__=='__main__':
     main()
-
-
-
-
-
-    
