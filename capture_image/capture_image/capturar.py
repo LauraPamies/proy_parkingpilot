@@ -9,6 +9,14 @@ from rclpy.qos import ReliabilityPolicy, QoSProfile
 import pytesseract
 import time
 import requests
+import json
+import cv2
+import numpy as np
+import imutils
+import pytesseract
+import time
+import requests
+import json
 class Ros2OpenCVImageConverter(Node):   
 
     def __init__(self):
@@ -72,6 +80,21 @@ class Ros2OpenCVImageConverter(Node):
                 #cv2.imshow('Cropped', Cropped)
                 cv2.imshow("Imagen capturada por el robot", cv_img)
                 time.sleep(3)            #if detected == 1:
+                # URL de destino
+                url = 'http://localhost:3000/insertar_matricula'  # Reemplaza con la URL correcta de la API
+                # Datos del post a enviar
+                datos = {
+                'matricula': text,
+    
+                }
+                respuesta = requests.post(url, json=datos)
+                                
+                # Verificar la respuesta
+                if respuesta.status_code == 200:
+                    print("¡El post se ha creado exitosamente!")
+                else:
+                    print("Error al crear el post. Código de estado:", respuesta.status_code)
+
 
 
             #cv2.waitKey(0)
